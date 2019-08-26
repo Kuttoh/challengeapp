@@ -22,3 +22,10 @@ Route::get('/supplier/editSupplier/{id}', 'SuppliersController@edit');
 Route::post('/supplier/update/{id}', 'SuppliersController@update');
 Route::delete('/supplier/delete/{id}', 'SuppliersController@destroy');
 Route::get('/suppliers', 'SuppliersController@index');
+
+
+Route::post('/product/createProduct', 'ProductsController@store');
+Route::get('/product/editProduct/{id}', 'ProductsController@edit');
+Route::post('/product/update/{id}', 'ProductsController@update');
+Route::delete('/product/delete/{id}', 'ProductsController@destroy');
+Route::get('/products', 'ProductsController@index');

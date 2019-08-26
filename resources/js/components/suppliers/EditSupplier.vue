@@ -26,7 +26,7 @@
         },
 
         created() {
-            let uri = `http://challenge.appp/api/supplier/editSupplier/${this.$route.params.id}`;
+            let uri = `/api/supplier/editSupplier/${this.$route.params.id}`;
             this.axios.get(uri).then((response) => {
                 this.supplier = response.data;
             });

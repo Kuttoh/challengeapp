@@ -38,7 +38,7 @@
         },
 
         created() {
-            let uri = 'http://challenge.appp/api/suppliers';
+            let uri = '/api/suppliers';
             this.axios.get(uri).then(response => {
                 this.suppliers = response.data.data;
             });
@@ -46,7 +46,7 @@
 
         methods: {
             deleteSupplier(id) {
-                let uri = `http://challenge.appp/api/supplier/delete/${id}`;
+                let uri = `/api/supplier/delete/${id}`;
                 this.axios.delete(uri).then(response => {
                     this.suppliers.splice(this.suppliers.indexOf(id), 1);
                 });

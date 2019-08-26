@@ -27,7 +27,7 @@
 
         methods: {
             addSupplier() {
-                let uri = 'http://challenge.appp/api/supplier/createSupplier';
+                let uri = '/api/supplier/createSupplier';
                 this.axios.post(uri, this.supplier).then((response) => {
                     this.$router.push({name: 'suppliers'});
                 });

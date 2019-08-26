@@ -4,6 +4,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -21,6 +22,10 @@ import HomeComponent from './components/HomeComponent.vue';
 import CreateSupplier from './components/suppliers/CreateSupplier';
 import IndexSupplier from './components/suppliers/IndexSupplier.vue';
 import EditSupplier from "./components/suppliers/EditSupplier";
+
+import CreateProduct from './components/products/CreateProduct';
+import EditProduct from './components/products/EditProduct';
+import IndexProduct from './components/products/IndexProduct';
 
 const routes = [
     {
@@ -42,6 +47,21 @@ const routes = [
         name: 'editSupplier',
         path: '/editSupplier/:id',
         component: EditSupplier
+    },
+    {
+        name: 'createProduct',
+        path: '/createProduct',
+        component: CreateProduct
+    },
+    {
+        name: 'editProduct',
+        path: '/editProduct',
+        component: EditProduct
+    },
+    {
+        name: 'products',
+        path: '/products',
+        component: IndexProduct
     }
 ];
 

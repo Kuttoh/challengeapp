@@ -16,5 +16,8 @@
 //});
 
 Route::get('/{any}', function () {
-    return view('suppliers');
+    return view('index');
 })->where('any', '.*');
+
+
+
