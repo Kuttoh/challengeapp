@@ -20,7 +20,10 @@
             <tr v-for="supplier in suppliers" :key="supplier.id">
                 <td>{{ supplier.id }}</td>
                 <td>{{ supplier.name }}</td>
-                <td><router-link :to="{name: 'editSupplier', params: { id: supplier.id }}" class="btn btn-primary">Edit</router-link></td>
+                <td>
+                    <router-link :to="{name: 'editSupplier', params: { id: supplier.id }}" class="btn btn-primary">Edit</router-link>
+                    <button class="btn btn-danger" @click.prevent="deleteSupplier(supplier.id)">Delete</button>
+                </td>
             </tr>
             </tbody>
         </table>
@@ -39,6 +42,15 @@
             this.axios.get(uri).then(response => {
                 this.suppliers = response.data.data;
             });
+        },
+
+        methods: {
+            deleteSupplier(id) {
+                let uri = `http://challenge.appp/api/supplier/delete/${id}`;
+                this.axios.delete(uri).then(response => {
+                    this.suppliers.splice(this.suppliers.indexOf(id), 1);
+                });
+            }
         }
     }
 </script>
