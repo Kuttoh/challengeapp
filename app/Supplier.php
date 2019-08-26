@@ -10,4 +10,9 @@ class Supplier extends Model
     use SoftDeletes;
 
     protected $fillable = ['name'];
+
+    public function supplierProducts()
+    {
+        return $this->belongsToMany(Product::class, 'supplier_products', 'product_id', 'supply_id')->withTimestamps();
+    }
 }
