@@ -53,6 +53,11 @@ class SuppliersController extends Controller
 
     public function destroy($id)
     {
-        //
+        $supplier = Supplier::find($id);
+
+        $supplier->delete();
+
+        return response()->json('successfully deleted');
+
     }
 }

@@ -18,9 +18,9 @@ import App from './App.vue'
 Vue.use(VueAxios, axios);
 
 import HomeComponent from './components/HomeComponent.vue';
-import CreateSupplierComponent from './components/CreateSupplierComponent';
-import IndexSupplierComponent from './components/IndexSupplierComponent.vue';
-import EditSupplierComponent from "./components/EditSupplierComponent";
+import CreateSupplier from './components/suppliers/CreateSupplier';
+import IndexSupplier from './components/suppliers/IndexSupplier.vue';
+import EditSupplier from "./components/suppliers/EditSupplier";
 
 const routes = [
     {
@@ -31,17 +31,17 @@ const routes = [
     {
         name: 'createSupplier',
         path: '/createSupplier',
-        component: CreateSupplierComponent
+        component: CreateSupplier
     },
     {
         name: 'suppliers',
         path: '/suppliers',
-        component: IndexSupplierComponent
+        component: IndexSupplier
     },
     {
         name: 'editSupplier',
         path: '/editSupplier/:id',
-        component: EditSupplierComponent
+        component: EditSupplier
     }
 ];
 

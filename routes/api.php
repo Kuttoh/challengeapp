@@ -20,4 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/supplier/createSupplier', 'SuppliersController@store');
 Route::get('/supplier/editSupplier/{id}', 'SuppliersController@edit');
 Route::post('/supplier/update/{id}', 'SuppliersController@update');
+Route::delete('/supplier/delete/{id}', 'SuppliersController@destroy');
 Route::get('/suppliers', 'SuppliersController@index');
